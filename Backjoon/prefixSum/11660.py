@@ -2,6 +2,7 @@ import sys
 input = sys.stdin.readline
 
 n, m = map(int, input().split())
+# 1열과 1행이 0으로 채워지도록 초기화 => 인덱스를 1부터 사용하기 위해
 table = [[0] * (n + 1)]
 s = [[0] * (n + 1) for _ in range(n + 1)]
 
