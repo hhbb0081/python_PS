@@ -10,16 +10,8 @@ visited = [False for _ in range(n)]
 global ans
 ans = 0
 
-# # 2 ~ n 개의 조합 구해서 순회하면서 조건 맞는지 확인
-# for i in range(2, n + 1):
-#     combination = list(combinations(level, i))
-#     for com in combination:
-#         com = sorted(com)
-#         if com[-1] - com[0] >= x and l <= sum(com) <= r:
-#             ans += 1
-
 queue = []
-def DFS(start, cnt):
+def DFS(start, cnt): 
     global ans
     if cnt == n:
         return
@@ -40,3 +32,11 @@ def DFS(start, cnt):
 
 DFS(0, 0)
 print(ans)
+
+# # 2 ~ n 개의 조합 구해서 순회하면서 조건 맞는지 확인
+# for i in range(2, n + 1):
+#     combination = list(combinations(level, i))
+#     for com in combination:
+#         com = sorted(com)
+#         if com[-1] - com[0] >= x and l <= sum(com) <= r:
+#             ans += 1
